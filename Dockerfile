@@ -1,6 +1,6 @@
 FROM alpine:3
 
-LABEL maintainer="Henry<hi@henry.wang>"
+LABEL maintainer="chenjunxin"
 
 ADD src/wait-for.sh /wait-for.sh
 
@@ -95,6 +95,7 @@ ENV DB_PASS ttrss
 ADD src/configure-db.php /configure-db.php
 ADD src/s6/ /etc/s6/
 ADD entrypoint.sh /entrypoint.sh
+CMD chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 #CMD php /configure-db.php && exec s6-svscan /etc/s6/

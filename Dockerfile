@@ -96,6 +96,6 @@ ADD src/configure-db.php /configure-db.php
 ADD src/s6/ /etc/s6/
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
-#
+
 #CMD php /configure-db.php && exec s6-svscan /etc/s6/
 

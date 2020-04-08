@@ -15,5 +15,8 @@ else
     ln -sf "/var/www" "/var/tmp/www/${ROOT_PATH}"
 fi
 
+php /configure-db.php
+exec s6-svscan /etc/s6/
+
 #php /configure-db.php
 #exec supervisord -c /etc/supervisor/conf.d/supervisord.conf

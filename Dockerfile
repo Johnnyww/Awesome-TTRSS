@@ -94,6 +94,5 @@ ENV DB_PASS ttrss
 # Always re-configure database with current ENV when running container, then monitor all services
 ADD src/configure-db.php /configure-db.php
 ADD src/s6/ /etc/s6/
-
 #
 CMD php /configure-db.php && exec s6-svscan /etc/s6/

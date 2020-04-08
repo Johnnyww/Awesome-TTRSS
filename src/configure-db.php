@@ -55,6 +55,8 @@ if(dbcheckconn($config)){
         $contents .= "\r\n\t";
         $contents .= "define('_HTTP_PROXY', '"  . env('HTTP_PROXY') . "');";
     }
+    
+    $contents .= "define('_SKIP_SELF_URL_PATH_CHECKS',true);";
 
     file_put_contents($confpath, $contents);
 }

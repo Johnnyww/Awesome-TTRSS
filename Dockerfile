@@ -84,7 +84,7 @@ RUN apk add --update --virtual build-dependencies tar \
 EXPOSE 80
 
 # complete path to ttrss
-ENV SELF_URL_PATH http://localhost:181
+ENV SELF_URL_PATH http://localhost
 
 # Expose default database credentials via ENV in order to ease overwriting
 ENV DB_NAME ttrss
